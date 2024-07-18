@@ -1,14 +1,14 @@
 [
   {
-    "server_name": "Cron Job",
-    "api_url": "https://minilink-sklo.onrender.com/"
+    "server_name": "Mini Link API",
+    "api_url": "https://minilink-sklo.onrender.com"
   },
   {
-    "server_name": "Mini Link",
-    "api_url": "https://minilink-sklo.onrender.com/"
-  },
-  {
-    "server_name": "Mini Link Auth",
+    "server_name": "Mini Link Auth API",
     "api_url": "https://mini-link-auth.onrender.com"
+  },
+  {
+    "server_name": "R Devs Todo API",
+    "api_url": "https://r-devs-todo-api.vercel.app"
   }
 ]

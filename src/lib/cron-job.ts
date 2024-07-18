@@ -1,3 +1,4 @@
+import { CRON_API } from "../config";
 import cronData from "../../public/cron-data.json";
 import custom_logger from "./custom-logger";
 
@@ -6,11 +7,23 @@ interface CronData {
   api_url: string;
 };
 
+const getCronData = () => {
+  const cron_api: CronData = {
+    server_name: "Cron Job",
+    api_url: CRON_API,
+  };
+
+  return [
+    cron_api,
+    ...cronData,
+  ];
+};
+
 const cronFunction = async () => {
   console.log("JOB - STARTED");
 
   await new Promise((resolve) => {
-    (cronData as CronData[]).forEach(async ({ server_name, api_url }, i, arr) => {
+    getCronData().forEach(async ({ server_name, api_url }, i, arr) => {
       await fetch(api_url)
         .then(() => {
           custom_logger(server_name, "SUCCESS, SERVER RESTARTED");
@@ -27,7 +40,7 @@ const cronFunction = async () => {
         });
     });
   })
-  .then(console.log);
+    .then(console.log);
 };
 
 export {

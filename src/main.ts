@@ -27,8 +27,9 @@ const server = http.createServer((req, res) => {
 Server(server)
   .then(() => {
     server.listen(PORT, () => {
-      console.log({ CRON_TIME })
       console.log(`\nserver running on port: ${PORT}\n`);
+
+      console.log({ CRON_TIME });
 
       cron.schedule(CRON_TIME, cronFunction);
     });

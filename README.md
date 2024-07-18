@@ -1,5 +1,11 @@
 ## Welcome to my API re-starter application
 
+- Table of context
+  - [About](#about)
+  - [Getting Started](#getting-started-for_developers)
+  - [Adding new API](#adding-new-api-for_developers)
+  - [Adjusting cron time](#adjusting-cron-time)
+
 ### About
 
 - This is a cron job application that constantly hits my online APIs to make sure the remain alive
@@ -35,3 +41,8 @@
     api_url: string;
   }
 ```
+
+### Adjusting cron time
+
+- current cron - time is set to `"*/12 * * * *"` meaning `"every 12 mins"`
+- To verify or adjust this interval, visit <https://crontab.guru/#>\*_**\***_\*
