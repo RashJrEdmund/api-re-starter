@@ -1,7 +1,7 @@
 {
   "name": "api-re-starter",
   "version": "1.0.0",
-  "description": "Api starter project, for constantly restarting apps shutdown by services like render.com",
+  "description": "API starter project, for constantly restarting apps shutdown by services like render.com",
   "main": "main.ts",
   "scripts": {
     "serve": "node build/main.js",

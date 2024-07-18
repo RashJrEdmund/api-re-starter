@@ -1,6 +1,7 @@
 import http from "node:http";
 import { PORT } from "./config";
 import { Server } from "./server";
+import { cronFunction } from "./lib";
 
 const server = http.createServer((req, res) => {
   res.setHeader("Content-Type", "text/html");
@@ -8,12 +9,13 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, {
     "Content-Type": "application/json",
     "x-author": "Orashus (Rash)",
+    "x-author-github": "https://github.com/rashjredmund",
   });
 
-  console.log({ path: req.url })
+  // console.log({ path: req.url });
 
   if (req.method === "GET") {
-    console.log("IN GET METHOD")
+    console.log("IN GET METHOD");
   }
 
   if (req.method === "POST") {
@@ -25,6 +27,8 @@ const server = http.createServer((req, res) => {
 
 Server(server)
   .then(() => {
+    cronFunction();
+
     server.listen(PORT, () => {
       console.log(`\nserver running on port: ${PORT}\n`);
     });

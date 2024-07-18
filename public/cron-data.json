@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Cron - Job - API",
+    "api-url": "https://minilink-sklo.onrender.com/"
+  },
+  {
+    "name": "Mini - Link - API",
+    "api-url": "https://minilink-sklo.onrender.com/"
+  },
+  {
+    "name": "Mini - Link - AUTH - API",
+    "api-url": "https://mini-link-auth.onrender.com"
+  }
+]
