@@ -31,7 +31,7 @@
 
 ```bash
   interface CronData {
-    name: string;
-    "api-url": string;
+    server_name: string;
+    api_url: string;
   }
 ```

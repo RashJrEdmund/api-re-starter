@@ -14,9 +14,9 @@ const custom_logger: LoggerTYPe = (_label, val, options) => {
   const _log_type = options?.type ?? "log";
 
   return console[_log_type](
-      `\n \n ========== START ${_label} ========== \n \n`,
+      `\n \n ========== START +=> ${_label} ========== \n \n`,
       val,
-      `\n \n ========== END ${_label} ========== \n \n`
+      `\n \n ========== END +=> ${_label} ========== \n \n`
   );
 }
 

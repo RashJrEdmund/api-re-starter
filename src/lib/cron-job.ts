@@ -2,25 +2,32 @@ import cronData from "../../public/cron-data.json";
 import custom_logger from "./custom-logger";
 
 interface CronData {
-  name: string;
-  "api-url": string;
+  server_name: string;
+  api_url: string;
 };
 
-const cronFunction = () => {
-  console.log("in function");
+const cronFunction = async () => {
+  console.log("JOB - STARTED");
 
-  (cronData as CronData[]).forEach(async (data) => {
-    await fetch(data["api-url"])
-      .then(() => {
-        custom_logger(data.name, "SUCCESS, SERVER RESTARTED");
-      })
-      .catch(() => {
-        custom_logger(data.name, "SOMETHING WENT WRONG", { type: "warn" });
-      })
-      .finally(() => {
-        console.log("Moving On")
-      });
-  });
+  await new Promise((resolve) => {
+    (cronData as CronData[]).forEach(async ({ server_name, api_url }, i, arr) => {
+      await fetch(api_url)
+        .then(() => {
+          custom_logger(server_name, "SUCCESS, SERVER RESTARTED");
+        })
+        .catch(() => {
+          custom_logger(server_name, "SOMETHING WENT WRONG", { type: "warn" });
+        })
+        .finally(() => {
+          if (i === arr.length - 1) {
+            return resolve("JOB DONE\n");
+          };
+
+          console.log("Moving On");
+        });
+    });
+  })
+  .then(console.log);
 };
 
 export {
