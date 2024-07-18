@@ -1,0 +1,30 @@
+{
+  "name": "api-re-starter",
+  "version": "1.0.0",
+  "description": "Api starter project, for constantly restarting apps shutdown by services like render.com",
+  "main": "main.ts",
+  "scripts": {
+    "serve": "node build/main.js",
+    "dev": "nodemon",
+    "build": "rm -rf ./build && npx tsc",
+    "test": "jest"
+  },
+  "keywords": [
+    "api-starter",
+    "api-re-starter",
+    "re-starter",
+    "spin-up"
+  ],
+  "author": "orashus",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^20.14.11",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
