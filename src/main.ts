@@ -17,10 +17,6 @@ const server = http.createServer((req, res) => {
   //   console.log("IN GET METHOD");
   // }
 
-  // if (req.method === "POST") {
-  //   console.log("POST GET METHOD");
-  // }
-
   return res.end("🚀 SERVER HEALTHY 🚀");
 });
 

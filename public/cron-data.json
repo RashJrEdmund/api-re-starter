@@ -9,6 +9,6 @@
   },
   {
     "server_name": "R Devs Todo API",
-    "api_url": "https://r-devs-todo-api.vercel.app"
+    "api_url": "https://r-devs-todo-api.onrender.com"
   }
 ]
