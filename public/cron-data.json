@@ -10,5 +10,9 @@
   {
     "server_name": "R Devs Todo API",
     "api_url": "https://r-devs-todo-api.onrender.com"
+  },
+  {
+    "server_name": "E Beta API",
+    "api_url": "https://beta-api-testyfy.onrender.com/health"
   }
 ]
